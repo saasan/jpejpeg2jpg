@@ -1,0 +1,9 @@
+{
+    "search.exclude": {
+        "build": true
+    },
+
+    "deno.enable": true,
+    "deno.lint": true,
+    "deno.unstable": false
+}

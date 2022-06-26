@@ -1,0 +1,55 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+        {
+            "type": "deno",
+            "command": "compile",
+            "args": [
+                "--allow-read",
+                "--allow-write",
+                "--output",
+                "build/jpejpeg2jpg",
+                "--target",
+                "x86_64-pc-windows-msvc",
+                "main.ts"
+            ],
+            "problemMatcher": [
+                "$deno"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "label": "deno: compile (Windows)"
+        },
+        {
+            "type": "deno",
+            "command": "compile",
+            "args": [
+                "--allow-read",
+                "--allow-write",
+                "--output",
+                "build/jpejpeg2jpg",
+                "main.ts"
+            ],
+            "problemMatcher": [
+                "$deno"
+            ],
+            "group": "build",
+            "label": "deno: compile (Linux)"
+        },
+        {
+            "type": "deno",
+            "command": "test",
+            "args": [
+                "--allow-read",
+                "--allow-write"
+            ],
+            "problemMatcher": [
+                "$deno-test"
+            ],
+            "group": "test",
+            "label": "deno: test"
+        }
+    ]
+}
