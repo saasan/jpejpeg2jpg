@@ -12,7 +12,7 @@ import InputLoop from 'https://deno.land/x/input@2.0.3/index.ts';
 //------------------------------------------------------------------------------
 async function rename(path: string) {
     const name = basename(path);
-    const newName = name.replace(/\.jpeg$/, '.jpg').replace(/\.jpe$/, '.jpg');
+    const newName = name.replace(/\.jpeg$/i, '.jpg').replace(/\.jpe$/i, '.jpg');
     const newPath = join(dirname(path), newName);
     const stat = await Deno.lstat(path);
 
